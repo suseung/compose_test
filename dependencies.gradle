@@ -1,0 +1,57 @@
+ext.deps = [:]
+
+def versions = [:]
+versions.android_gradle_version = "3.5.1"
+versions.kotlin_version = "1.6.10"
+
+versions.app_core_ktx = "1.7.0"
+versions.compose_version = "1.1.1"
+versions.compose_navigation = "2.5.0-rc01"
+versions.compose_foundation = "1.2.0-beta01"
+versions.junit = "4.13.2"
+versions.ext_junit = "1.1.3"
+versions.app_espresso_core = "3.4.0"
+versions.compose_navigation = "2.5.0-rc01"
+versions.compose_foundation = "1.2.0-beta01"
+
+versions.retrofit = "2.9.0"
+versions.hilt = "2.41"
+versions.hilt_navigation = "1.0.0"
+
+versions.coil = "1.5.1"
+ext.versions = versions
+
+def deps = [:]
+deps.kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin_version"
+
+def core = [:]
+core.ktx = "androidx.core:core-ktx:$versions.app_core_ktx"
+deps.core = core
+
+def compose = [:]
+compose.ui = "androidx.compose.ui:ui:$versions.compose_version"
+compose.material = "androidx.compose.material:material:$versions.compose_version"
+compose.ui_preview = "androidx.compose.ui:ui-tooling-preview:$versions.compose_version"
+compose.ui_test_junit4 = "androidx.compose.ui:ui-test-junit4:$versions.compose_version"
+compose.ui_tooling = "androidx.compose.ui:ui-tooling:$versions.compose_version"
+compose.livedata = "androidx.compose.runtime:runtime-livedata:$versions.compose_version"
+compose.navigation = "androidx.navigation:navigation-compose:$versions.navigation"
+compose.foundation = "androidx.compose.foundation:foundation:$versions.compose_foundation"
+deps.compose = compose
+
+def retrofit = [:]
+retrofit.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.converter = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+deps.retrofit = retrofit
+
+def hilt = [:]
+hilt.hilt = "com.google.dagger:hilt-android:$versions.hilt"
+hilt.navigation = "androidx.hilt:hilt-navigation-compose:$versions.hilt_navigation"
+hilt.compiler = "com.google.dagger:hilt-android-compiler:$versions.hilt"
+deps.hilt = hilt
+
+def coil = [:]
+coil.coil = "com.github.skydoves:landscapist-coil:$versions.coil"
+deps.coil = coil
+
+ext.deps = deps
